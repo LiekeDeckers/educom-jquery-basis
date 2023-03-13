@@ -27,9 +27,17 @@
                         data: { rating: value },
                         success: function(result) { 
                             // Update average rating
-                            
+                            let ratings = []
+                            ratings.push(value)
+                            console.log(ratings)
 
-                            
+                            let sum = 0
+                            ratings.map(e => sum += e)
+                            console.log(sum)
+
+                            let average = (sum / ratings.length)
+                            console.log(average)
+
                         }
                 })
             })
